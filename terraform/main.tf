@@ -20,7 +20,7 @@ resource "aws_db_instance" "vehicles_rds" {
 }
 
 resource "aws_security_group" "rds_vehicle_sg" {
-  name        = "rds-security-group"
+  name        = "rds-vehicle-sg"
   description = "Permitir acesso ao banco apenas de dentro da VPC"
 
   ingress {
