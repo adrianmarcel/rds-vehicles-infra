@@ -15,11 +15,11 @@ resource "aws_db_instance" "vehicles_rds" {
   parameter_group_name   = "default.postgres15"
   skip_final_snapshot    = true
   publicly_accessible    = false
-  vpc_security_group_ids = [aws_security_group.rds_sg.id]
+  vpc_security_group_ids = [aws_security_group.rds_vehicle_sg.id]
   deletion_protection    = false
 }
 
-resource "aws_security_group" "rds_sg" {
+resource "aws_security_group" "rds_vehicle_sg" {
   name        = "rds-security-group"
   description = "Permitir acesso ao banco apenas de dentro da VPC"
 
